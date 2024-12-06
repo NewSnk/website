@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- link to CSS styles-->
+    <link rel="stylesheet" href="styles.css">
+    
+    <header>
+        <b>final project</b>
+    </header>
+
+</head>
+<body>
+    <a href="index.html" id="homelink">&lt;&lt;&lt;back</a>
+    <script src="backlink-scroll.js"></script>
+
+    <p>
+        my inspiration for my final project is this note delivery system i saw being used in 
+        <a href="https://www.instagram.com/silverfuture_bar/">a bar</a> in Berlin. Each table at
+        the bar has a number assigned to it and they set up a pulley system that drags around a loop
+        that has strings with clothespins on it. Each table can write notes anonymously or otherwise
+        to the others around the room by labeling them with the table number. <br><br>
+
+        i'm really interested in studying how technology can enhance face-to-face or even create new
+        ways of human physical interaction, and i thought this was a nice example of that - instead
+        of having each table be insular and little interaction with the room, the entire place turned 
+        inwards and started to get to know eachother, to exchange numbers and looks and laughs, and the
+        bar was busier than i had ever seen it. <br><br>
+
+        because i'm also really into objects with hidden identies or spaces that make the viewer feel
+        like they've discovered something all to themselves, i want to combine these concepts for my final
+        project. the idea is to make these roaming sculptures that navigate around the ceiling, and are 
+        interesting enough to be purely decoration, but also can be called upon for note receipt and delivery to
+        identified locations in the space. <br><br>
+
+        visually for this application, i want to create a sculptural object that captures the kitschy vibe similar to this from
+        <a href="https://www.instagram.com/cubbyholebar/?hl=en">cubbyhole</a> in new york city and the etherial, 
+        blobby, space & organic feelings from this piece called Lunar Landscape by Isamu Noguchi. 
+
+    </p>
+    <div> 
+        <img style = width:63%; src = "media/final-project/cubby.png">
+        <img style = width:14%; src = "media/final-project/lunar-landscape.JPG">
+    </div>
+    <p>
+        the design of the mechanism is quite tricky as in visioning, i want multiple (30?) of these
+        robots to be able to move around the grid, so a simple cnc would not work, and because they hang 
+        down, many other designs are unfeasible as well.<br><br>
+
+        the design that i think will work the best is a simple gear and pinion system in two two-dimensions
+        that allow the element to hang under the framing and be pulled in both x and y directions. this design
+        means that the entire middle can be routed out while allowing for stability and movement. 
+
+    </p>
+    <div> 
+        <img style = width:40%; src = "media/final-project/sketch-5.png" >
+        <img style = width:20%; src = "media/final-project/sketch-4.png">
+    </div>
+    <p>
+        you can see that many iterations were made to envision a few ideas, including a few more 
+        ridiculous ideas (together with Leo and Quentin), but for now i've settled on a gear and 
+        rack system in two directions so that the object can hang underneath the extrusion and move 
+        in two-dimensions at the intersections.
+    </p>
+    <div> 
+        <img style = width:50%; src = "media/final-project/sketches-2.png">
+        <img style = width:25%; src = "media/final-project/sketches-1.png">
+    </div>
+
+    <div> 
+        <img style = width:30%; src = "media/final-project/sketches.png">
+        <img style = width:50%; src = "media/final-project/sketches-3.png">
+    </div>
+    <p>
+        i tried to mock this up in fusion360 parametrically, but realized that i was still moreso in the 
+        idea and playing around stage then was i really able to parametrize - i tried but i started running
+        into more constraints than i thought. this may be an indicator that the original vision doesn't work
+        so well, but for now i have a mocked up version that appears like it could work in 3d space. 
+
+        quick drawings of the distributed call boxes and the receptacle mechanism are below. i'm 
+        thinking of trying to either do the pneumatic receptacle, or just the paperclip for simplicitity and cuteness.  
+    </p>
+    <div> 
+        <img style = width:50%; src = "media/final-project/call-box.png">
+        <img style = width:50%; src = "media/final-project/receptacle.png">
+    </div>
+    <p>
+        you can see that i've tried to envision a system that provides support, x and y directional movement,
+        and leaves the bottom open so that a note can come down. it's proving very difficult and hopefully some
+        additional eyes can shed some light! <br><br>
+
+        so obviously, i'm working on designing this component this week, but to complete
+        the project before the it's due, i'm hoping to follow this approximate schedule.
+    </p>
+    <div> 
+        <img style = width:80%; src = "media/final-project/project-planning.png" >
+    </div>
+    <p>
+        as for how the note is recieved into the element, i'm picturing a pulled system that extends 
+        down when it reaches its location and allows for a note to be deposited. in class and outside of class we discussed the concept of
+        the <a href="https://hangprinter.org/">hangprinter</a>, or a cnc controller by the spinning of 3 or more rotors to increase and decrease the lengths
+        of threads held at tension to move an object around in 3d dimension space. the benefits of this method are that the size of the printer becomes
+        constrained by the size of the room which is exciting. i decided to pursue this approach.<br><br>
+        
+        i started by designing the mechanisms in cad. first i knew that for the demonstration i would need idlers to mount to the sides of the frames so that i could
+        hold the position in 3d space. i started in fusion360 and designed this piece that would hold M5 screws, and the <a href="https://www.amazon.com/dp/B08X2SX1GL?psc=1&ref=ppx_yo2ov_dt_b_product_details">idlers</a> 
+        and slot directly to the aluminum extrusion left over from machine week.  
+    </p>
+    <img style = width:50%; src = "media/final-project/idler-holders.png">
+    <img style = width:50%; src = "media/final-project/idler-holders-1.png">
+    <p>
+        the other main mechanical component for the machine is spinners that can be attached to the heads of the motors. i came up with this design that snap fits to the <a href="https://www.amazon.com/dp/B088BG2QFG?psc=1&ref=ppx_yo2ov_dt_b_product_details">nema 17 motors</a>
+        that i had ordered. i designed a bracket that would fit directly over the screw holes in the motors and firmly secure it to a sidewall. 
+    </p>
+    <img style = width:50%; src = "media/final-project/spinner-2.png">
+    <img style = width:50%; src = "media/final-project/spinner-1.png">
+    <img style = width:50%; src = "media/final-project/spinner.png">
+    <p>
+        i designed the noguchi object that i wanted to be moving around the room in blendr. i wanted it to be hollow hydrostone with holes in it where light could escape. 
+    </p>
+    <video controls autoplay="none" muted width="250">
+        <source  src="media/final-project/noguchi-orb.mp4" type="video/mp4">
+    </video>
+    <p>
+        finally, i designed an extrusion cage to hold the components and put it all together in cad. 
+    </p>
+    <img style = width:50%; src = "media/final-project/machine.png">
+    <img style = width:50%; src = "media/final-project/machine-1.png">
+    <p>
+        i started 3d printing because there was quite a rush at the reef. for the orb object, i wanted to make it big, and printed out the shape with the intention of oomooing the 
+        positive side in a box. i asked around for oomoo but the size was a little bit too much so i downsized and printed a smaller version, and laser cut a box to fit it perfectly for 
+        oomoo. 
+    </p>
+</body>
+</html>

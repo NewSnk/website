@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- link to CSS styles-->
+    <link rel="stylesheet" href="styles.css">
+    <header>
+        <b>week 6</b> <br>
+        <b>electronics production</b> <br>
+    </header>
+</head>
+<body>
+    <a href="index.html" id="homelink">&lt;&lt;&lt;back</a>
+    <script src="backlink-scroll.js"></script>
+    <p>
+        this week was my first real shit-show week. <br><br>
+        the goal was to mill our boards using the milling machines available at our respective labs. for the harvard lab, we had a 
+        rolad srm-20
+    </p>
+    <div> 
+        <img style = width:20%; src = "media/week6/roland.png">
+    </div>
+    <p>
+        in the lab training, i came a little bit late but it seemed like the group struggled to mill their first board using
+        <a href="https://modsproject.org/">modsproject</a> design by neil gershenfeld and others. the interface looks like this for pcb milling
+        on the rolad.
+    </p>
+    <div> 
+        <img style = width:80%; src = "media/week6/mods.png">
+    </div>
+    <p>
+        when i came back the next day to mill my pcb, leo had written up a quite comprehensive <a href="https://github.com/leomcelroy/fab-notes/blob/main/MODS-SRM20.md">guide</a>
+        to mods. after attempting to mill my boards, it was apparent that there was one serious omission from the guide which i'll note below. <br><br>
+
+        pcb milling on the roland is two steps, one involves milling the traces (the surface etching) using a 1/64" endmill, and then the second step
+        is to route out the board edges so that it's free from the sheet using a 1/32" endmill. the endmills are super small and delicate and luckily there
+        is a massive supply, although i am told that they're not cheap (maybe $20/endmill). <br><br>
+        
+        i struggled with two things on mods. the first is that my edge cutout wasn't being recognized and i had to redo it a couple times from the kicad
+        export. i'm still not exactly sure what i did differently, but there's this helpful "invert" button in mods that switches black to white and white to black
+        and this helped get the right profile. the only thing to be aware of is that if the tolerances are tight, you might be shifting the border. for me this actually
+        did end up being an issue because it cut in a little more than i would have liked.
+    </p>
+    <div> 
+        <img style = width:30%; src = "media/week6/invert-button.png">
+    </div>
+    <a>
+        don't tell neil (hi neil), but i ended up breaking two endmills because of one small missing step which was not hitting the calculate button
+        on mods again after setting the origin. this meant that when i was routing out the border, that the endmill when straight through the piece and
+        into the plate below. the worst part is that i adjusted and tried again without consulting with the tas and made the same mistake twice, sacrificing
+        two 1/32" endmills and a tiny piece of the plate too. <br><br>
+    </a>
+    <div> 
+        <img style = width:40%; src = "media/week6/mill-mistake.jpg">
+    </div>
+    <p>
+        don't tell neil (hi neil), but i ended up breaking two endmills because of one small missing step which was not hitting the calculate button
+        on mods again after setting the origin. this meant that when i was routing out the border, that the endmill when straight through the piece and
+        into the plate below. the worst part is that i adjusted and tried again without consulting with the tas and made the same mistake twice, sacrificing
+        two 1/32" endmills and a tiny piece of the plate too. <br><br>
+    </p>
+    <div class="tenor-gif-embed" data-postid="18675764" data-share-method="host" data-width="40%" display=flex justify-content=center align-items=center>
+        <a href="https://tenor.com/view/sorry-im-sorry-im-so-sorry-i-am-sorry-i-sorry-gif-18675764">Sorry Im Sorry GIF</a>from 
+        <a href="https://tenor.com/search/sorry-gifs">Sorry GIFs</a></div> 
+        <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <p>
+        <br><br>
+        anyway, i successfully milled the pcb on the third try after recalculating and then i had still a pretty mediocre result because the border
+        was too tight, but since it was a practice anyway, i thought it was fine to solder on.
+    </p>
+    <div> 
+        <img style = width:40%; src = "media/week6/board.png">
+    </div>
+    <p>
+        i was then overconfident on my soldering skills and i'm sure than many of these connections are not great, but it was really good to practice. the biggest
+        issue here was that the harvard lab has none of the parts in the "fab" library so we actually had nothing i could really work with which meant that i ended up
+        trying to solder an rgb led that required through-holes directly to the pad (just for practice, dumb i know), and i had to solder on an rp2040 because we didnt 
+        have any esp32s. i double checked that the output pins for the rp2040 would work (with some coding adjustments and i think they should 
+        have worked! based on diagramming) <br><br>
+
+        the rp2040 has data pins in the same place as the esp32 w, as well as power and ground in the same places, so my take was that it should be
+        interchangeable for this very basic application where wifi among other uses weren't required...
+    </a>
+    <div> 
+        <img style = width:40%; src = "media/week6/rp2040.jpg">
+    </div>
+    <p> 
+        anyway i soldered the parts on, and while i felt like i was getting better and smoother with each solder, i'm not sure about the quality
+        of the connections.
+    </p>
+    <div> 
+        <img style = width:40%; src = "media/week6/stuffed-board-annot.png">
+    </div>
+    <p> 
+        once satisfied, plugged it in and loaded the micropython interpretor to the xiao rp2040 and then 
+        sent it a quick line of code to test the onboard led (just making the led blink red).
+    </p>
+    <div> 
+        <img style = width:40%; src = "media/week6/trial-board.png">
+    </div>
+    <p> 
+        this board didn't work, but go to <a href="week11.html">week 11</a>, to see this board new and improved! or go to <a href="week7.html">week 7</a>, <a href="week8.html">week 8</a>,
+        <a href="week9.html">week 9</a>, <a href="week10.html">week 10</a>, <a href="week11.html">week 11</a>, or <a href="week12.html">week 12</a> for other cool boards!
+    </p>
+</body>
+</html>
