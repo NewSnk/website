@@ -97,6 +97,8 @@ body {
   position: relative;
   object-fit:contain;
   text-decoration: none;
+  width: 100px;
+  height: 100px;
   left: 0%;
 }
 
