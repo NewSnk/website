@@ -67,10 +67,34 @@ body {
   grid-template-rows: repeat(4, 0px)
 }
 
+.rear_rack_wrapper {
+  display: grid;
+  column-gap: 200px; 
+  row-gap: 120px;
+  justify-content: center;
+  grid-template-columns: repeat(1, 0px);
+  grid-template-rows: repeat(4, 0px)
+}
+
+.rear_rack_container {
+  position: relative;
+  object-fit:contain;
+  text-decoration: none;
+  left: 0%;
+}
+
+.rear_rack_image {
+  object-fit:contain;
+  width: 400px;
+  height: 300px;
+  position: absolute;
+  transform: translateX(-50%);
+  left: 0%;
+}
+
+
 .home_container {
   position: relative;
-  width: 100px;
-  height: 100px;
   object-fit:contain;
   text-decoration: none;
   left: 0%;
@@ -92,8 +116,6 @@ body {
 
 .page_container {
   position: relative;
-  width: 200px;
-  height: 200px;
   object-fit:contain;
   text-decoration: none;
 }

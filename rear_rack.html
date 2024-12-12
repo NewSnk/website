@@ -4,191 +4,79 @@
     <meta charset="utf-8">
     <!-- link to CSS styles-->
     <link rel="stylesheet" href="styles.css">
+
     <header>
-        <b>week 3</b> <br>
-        <b>embedded programming </b> <br>
+        <b>computationally designed back rack for leni </b> <br>
+        <i>designing organic shapes for additive manufacturing</i> <br>
     </header>
+
 </head>
 <body>
-    <a href="index.html" id="homelink">&lt;&lt;&lt;back</a>
-    <script src="backlink-scroll.js"></script>
+    <div id="banner">
+        <div id="banner-content">
+          <a id="banner-content" href="aboutme.html">sophie leamon</a>
+        </div>
+    </div>
     <p>
-        this week we dove into embedded programming, aka in our case, and this week,
-        setting up and sending simple instructions to micro-processers development boards and receiving
-        signals back. <br><br>
-        
-        ok, pausing here because the next section may be boring to you (yes, you), so click here 
-        to skip ahead to the fun part
-
+    after learning rhino and grasshopper i wanted to leverage tools to create a generative design process. the process allows
+    me to insert a mesh, as well as any solid components, and any empty space that must be maintained. the grasshopper process i designed
+    allows you to either manually customize a rendering or go through an evolutionary solver, selecting preferred designs that become parent
+    genomes for the new generations.        
     </p>
-
-     <!-- Create a button that will trigger the scroll -->
-     <button id="scrollButton" onclick="scrollToSection()">skip</button>
-
-     <script>
-        function scrollToSection() {
-            const targetSection = document.getElementById('targetSection');
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Show the scroll button when the user scrolls down a bit
-        window.addEventListener('scroll', () => {
-            const scrollButton = document.getElementById('scrollButton');
-            scrollButton.style.display = 'fixed';
-
-        })
-     </script>
+    <div class="rear_rack_wrapper">
+      <a class="rear_rack_container" href = "media/rear_rack/variations.jpg">
+        <img src="media/rear_rack/variations.jpg" class="rear_rack_image">
+      </a>
+    </div>
+    <p>
+        i designed a grasshopper file that allows for the form to change in node size, beam size, point count, seed, point distribution, 
+        and neighest neighbor calculations. 
+    </p>
+    <div class="rear_rack_wrapper">
+      <a class="rear_rack_container" href = "media/rear_rack/biomorpher1.gif">
+        <img src="media/rear_rack/biomorpher1.gif" class="rear_rack_image">
+      </a>
+    </div>
+    <p>
+        i perform beam and node structural analysis and grade the designs on their fill (how well the form matches the contours of the original mesh),
+        the volume, and the strength.
+    </p>
+    <div class="rear_rack_wrapper">
+        <a class="rear_rack_container" href = "media/rear_rack/build_process_2.png">
+            <img src="media/rear_rack/build_process_2.png" class="rear_rack_image">
+          </a>
+    </div>
 
     <p>
-
-        we started with a choice in micro-processor between the 
-        <a href="https://www.espressif.com/en/products/socs/esp32">ESP32</a> and the 
-        <a href="http://academy.cba.mit.edu/classes/embedded_programming/RP2040/RP2040.pdf">RP2040</a>.
-        both are super super cheap but as i'm learning, very powerful.
+        the form is then passed through an evolutionary solver that allows the user to select favorite designs and those genes are passed to ensuring generations.
     </p>
-
-    <div> 
-        <a href="https://www.aliexpress.us/item/3256805029012415.html?src=google&src=google&albch=shopping&acnt=708-803-3821&slnk=&plac=&mtctp=&albbt=Google_7_shopping&albagn=888888&isSmbAutoCall=false&needSmbHouyi=false&albcp=19158444193&albag=&trgt=&crea=en3256805029012415&netw=x&device=c&albpg=&albpd=en3256805029012415&gclid=Cj0KCQjw06-oBhC6ARIsAGuzdw3ohp5P2dH6r7UfdvxZ-BcX5LyngpsYUWa1iYL7vlwmO84PWyhor3YaAoYKEALw_wcB&gclsrc=aw.ds&aff_fcid=f50d9efbbb8a47a5b6139410bfeb61e7-1695347028529-03549-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=f50d9efbbb8a47a5b6139410bfeb61e7-1695347028529-03549-UneMJZVf&terminal_id=c8679d30abb444e7a725b6a770230ab1&afSmartRedirect=y&gatewayAdapt=glo2usa">
-            <img src = "media/week3/esp32.png" >
+    <div class="rear_rack_wrapper">
+        <a class="rear_rack_container" href = "media/rear_rack/biomorpher.gif">
+          <img src="media/rear_rack/biomorpher.gif" class="rear_rack_image">
         </a>
-        <a href ="https://www.aliexpress.us/item/3256805385809831.html?src=google&src=google&albch=shopping&acnt=708-803-3821&slnk=&plac=&mtctp=&albbt=Google_7_shopping&albagn=888888&isSmbAutoCall=false&needSmbHouyi=false&albcp=19108282527&albag=&trgt=&crea=en3256805385809831&netw=x&device=c&albpg=&albpd=en3256805385809831&gclid=Cj0KCQjw06-oBhC6ARIsAGuzdw2KL01VzMALGqaHIltpxsAvzaQGmZktsbTvfrN6WOJWOZuCxORj4JMaAphgEALw_wcB&gclsrc=aw.ds&aff_fcid=c1b1fdef60ff48d18842f7213d198db8-1695347173249-01850-UneMJZVf&aff_fsk=UneMJZVf&aff_platform=aaf&sk=UneMJZVf&aff_trace_key=c1b1fdef60ff48d18842f7213d198db8-1695347173249-01850-UneMJZVf&terminal_id=c8679d30abb444e7a725b6a770230ab1&afSmartRedirect=y&gatewayAdapt=glo2usa">
-            <img src = "media/week3/rp2040.png" >
-        </a>
-        <br>[^click them!]
+      </div>
+
+      <p>
+        and here's how it looks!
+    </p>
+    <div class="page_wrapper">
+    <a class="page_container" href = "media/rear_rack/blue_rack.png">
+        <img src="media/rear_rack/blue_rack.png" class="page_image">
+    </a>
+    <a class="page_container" href = "media/rear_rack/build_process_3.png">
+        <img src="media/rear_rack/build_process_3.png" class="page_image">
+    </a>
+    <a class="page_container" href = "media/rear_rack/biomorpher2.gif">
+        <img src="media/rear_rack/biomorpher2.gif" class="page_image">
+    </a>
+
     </div>
-     
     <p>
-        we got a little bit of advice about the pros and cons to choosing one micro-processor
-        over the other, with some highlights being that the ESP32 has built-in wifi support while the
-        RP2040 has exceptional documentation, although both can be written in either C/C++ and micro-python.
-        <br><br>
-        the <b>assignment this week</b> was to choose a micro-processer and write a program for a microcontroller 
-        development board that can interact with local input or output and communicate. we get *fake*
-        extra credit if we use different languages or development environments or connect external components to the board.
-        <br><br>
-        <b>ok so this time i didn't start off drawing because i would have no idea what to draw</b>
-        <br><br>
-        ...instead, we started by setting boards in python and in the arduino ide by mapping the micro-processor pins
-        to the board pins using the *exceptional documentation*.
-        
-    </p>
-    
-    <img style = width:40%; src = "media/week3/rp2040-pin-diagram-0.png" >
-
-    <p >
-        even despite exceptional documentation, it gets tricky because there are many more pins in the micro-processor 
-        than in the development board so there are some weird mappings to be done, and it gets trickier because the 
-        cores required to interpret the code have different definitions for the pins as well. <br><br>
-
-        the most simple place to start was just to play around with the built-in leds so we started there.
+        download the files 
+        <a href="media/rear_rack/rear_rack.3dm" download="rear_rack.3dm">here!</a>
     </p>
 
-    <img style = width:40%; src = "media/week3/rp2040-pin-diagram.png" >
-    <img style = width:40%; src = "media/week3/led-diagram.png" >
-
-    <p>
-        diagramming shows that the blue led is pin 25, green is 16, and red is 17, so we could define those in
-        the ide and start playing around with blinking and exchanging signals back and forth with the processor.
-        
-        one interesting thing to note about this board is that because the led is connected to power instead
-        of ground, the opposite logic as expected would apply: 0V means on while 3.3V would mean off (right?). if i don't 
-        provide more detail it's because i didn't get time to investigate.
-        <br><br>
-
-        this might not look exciting but technically the assignment was fulfilled by this little code that
-        just turns off the blue and green leds and has the red light flashing every second, sending back a signal
-        that continues counting as it changes.<br><br>
-
-        code is <a href="media/week3/led_flash_xiao_rp2040.txt">here</a>.
-    </p>
-
-    <div class="video-container" >
-        <video controls autoplay="none" muted>
-            <source  src="media/week3/IMG_0800.mp4" type="video/mp4">
-        </video>    
-    </div>
-
-    <div id="targetSection"></div>    
-
-    <p>
-        i wanted to do something interesting, so i attempted to make a <b>sensor 
-        that could text you when your fly was down</b>. <br><br>
-
-    </p>
-    <img src="media/week3/jeans-gif.gif">
-    <p>
-        image credit to <a href="https://www.freepik.com/free-vector/boyfriend-jeans-illustrated-gray-background-vector_28352904.htm">rawpixel.com on Freepik</a>
-    </p>
-
-    <p>
-        this is inspired by the time i was standing in front of a full bank of seated people
-        on the crowded 5am U8 train in Berlin with my fly as wide open as it could be, and 
-        someone who was sitting at head height and very much too close to me had to ask me to
-        close my fly. <br><br>
-
-        because this is such a common and such a humiliation problem, i figured, <b>who better
-        than i and when better than now to solve it! </b> <br><br>
-
-        1. the first challenge was to design the mechanism for detecting whether your fly was 
-        open. i was originally thinking that the best method would be a light detector but Quentin
-        suggested simply using a circuit that's completed when the zipper touches it (presumably 
-        high enough up on your zipper to be considered close). i went with this approach for 
-        simplicity but i think if i iterated on this it would need to change - to be discussed
-        later on. <br><br>
-
-        2. i also realized that it could be pretty annoying if you got texted everytime you wanted
-        to use the bathroom so there needed to be a second circuit that relayed data on whether your
-        top button was buttoned (if it was also open, you can be pretty sure that it's purposeful,
-        and if it's opened proximately to your fly also being undone, this is similarly likely to be
-        intentional)<br><br>
-
-        <b>~the design~</b> then was to simply wire two circuits on a rp2040 w (pico). i used micropython
-        and thonny to write some if else statements, connect to wifi, and use the twilio api to send
-        a text given condition satisfaction.
-
-        if you're curious, the code is <b><a href="media/week3/test_send_message.txt">here</a></b>.
-
-        ok, so i started with using some metal foil as a flexible material, easily prototypable,
-        that can be connected to fabric extremely easily, and set up a simple pico board with 
-        tape points on an old pair of jeans.
-
-        i originally cut out some connectors using the cricuit cutter, but for this iteration, 
-        it got a little messy as i played around. <br><br>
-    </p>
-
-    <img style = width:30%; src = "media/week3/pico.jpg" >
-    <img style = width:30%; src = "media/week3/cricuit-circle.jpg" >
-    <img style = width:30%; src = "media/week3/jeans.jpg" >
-
-    <br><br>
-
-    <p>
-        in combination, we get a pretty messy but cute prototype that is a bit finicky. i would
-        love to do a second iteration of this prototype using magnets to help close the circuits, 
-        or playing around with other sensors, specifically for the zipper component. i think if
-        i could solder to the zipper it would be much cleaner (i couldn't, probably shouldn't have
-        tried), but there's lots i'd still like to do here. <br><br>
-
-        a great success is that twilio is super adaptable and both texting and calling works great
-        and it's really cool to see how easy it is to work with the rp2040s and get them to do pretty
-        complex and intereting stuff really fast!
-
-    </p>
-
-    <div class="video-container-2">
-        <video controls autoplay>
-            <source src="media/week3/pants_video.mp4" type="video/mp4">
-        </video>
-    </div>
-    
-    <p>
-        to annotate the video above, you can see that while the top button is open
-        there is no phone call or text triggered, but when the fly is undone and the top button 
-        is open, a 5 second timer starts (waiting for you to remedy the issue on your own), 
-        and then at 5 seconds, you get a call (and a text, you could choose). <Br></Br>
-
-        you can simply turn away and take the call, and subtly zip up your fly! perfect!
-        
-    </p>
 </body>
+    <a href="index.html" id="homelink">&lt;back</a>
+    <script src="backlink-scroll.js"></script>
 </html>
