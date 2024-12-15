@@ -13,19 +13,20 @@ body {
   background-color: #ffffff;
 }
 
-header {
-  margin-top: 10px;
-  text-align: center;
-  height : 300 vh;
-  color: #94959c;
+div#banner {
+  padding-bottom: 30px;
 }
 
-a#banner-content { 
-  position: absolute; 
-  left: 435px;
-  top: 0px;
-  padding: 30px;
-  font-size: 40px;
+header {
+  text-align: center;
+  font-family: "Monospace";
+  color: #94959c;
+  margin-bottom: 20px;
+
+}
+
+a#banner-content {
+  font-size: 25px;
   font-family: wegas-blur;
   color: #ca1524;
   text-decoration: none;
@@ -38,10 +39,11 @@ p {
   text-align: center;
   font-family: "Monospace";
   color: #94959c;
+  text-decoration: none;
 }
 
 body {
-  margin-top: 100px;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -51,7 +53,7 @@ body {
 
 #homelink {
   position: absolute;
-  top: 40px;
+  top: 60px;
   left: 40px;
   text-decoration: none;
   color: #ce5454;
@@ -61,10 +63,9 @@ body {
 .home_wrapper {
   display: grid;
   column-gap: 300px; 
-  row-gap: 150px;
+  row-gap: 100px;
   justify-content: center;
-  grid-template-columns: repeat(3, 0px);
-  grid-template-rows: repeat(4, 0px)
+  grid-template-columns: repeat(4, 0px);
 }
 
 .rear_rack_wrapper {
@@ -91,7 +92,6 @@ body {
   transform: translateX(-50%);
   left: 0%;
 }
-
 
 .home_container {
   position: relative;
@@ -120,15 +120,14 @@ body {
   position: relative;
   object-fit:contain;
   text-decoration: none;
-  width: 100px;
-  height: 100px;
-  
+  width: 80px;
+  height: 80px;
 }
 
 .page_wrapper {
   display: grid;
   column-gap: 320px; 
-  row-gap: 350px;
+  row-gap: 330px;
   justify-content: center;
   grid-template-columns: repeat(3, 0px);
   grid-template-rows: repeat(4, 0px)
