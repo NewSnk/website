@@ -42,6 +42,12 @@ p {
   text-decoration: none;
 }
 
+a {
+  font-family: "Monospace";
+  color: #94959c;
+  text-decoration-line: underline;
+}
+
 body {
   margin-top: 50px;
   text-align: center;
@@ -79,14 +85,14 @@ body {
 
 .rear_rack_container {
   position: relative;
-  object-fit:contain;
+  object-fit: contain;
   text-decoration: none;
   left: 0%;
 }
 
 .rear_rack_image {
   object-fit:contain;
-  width: 400px;
+  width: 300px;
   height: 300px;
   position: absolute;
   transform: translateX(-50%);
@@ -120,14 +126,14 @@ body {
   position: relative;
   object-fit:contain;
   text-decoration: none;
-  width: 80px;
-  height: 80px;
+  width: 300px;
+  height: 350px;
 }
 
 .page_wrapper {
   display: grid;
-  column-gap: 320px; 
-  row-gap: 330px;
+  column-gap: 350px; 
+  row-gap: 300px;
   justify-content: center;
   grid-template-columns: repeat(3, 0px);
   grid-template-rows: repeat(4, 0px)
@@ -138,7 +144,6 @@ body {
   width: 300px;
   height: 300px;
   position: absolute;
-  left: 0%;
   transform: translateX(-50%);
 }
 
@@ -152,4 +157,39 @@ body {
   font-size: 15px;
   transform: translateX(-50%);
   left: 0%;
+}
+
+.about_me_image1 {
+  position: absolute;
+  left: 10px;
+  top: 125px;
+  width: 25%;
+}
+
+.about_me_image2 {
+  position: absolute;
+  left: 500px;
+  top: 260px;
+  width: 20%;
+}
+
+.about_me_image3 {
+  position: absolute;
+  left: 850px;
+  top: 150px;
+  width: 14%;
+}
+
+.about_me_image4 {
+  position: absolute;
+  left: 250px;
+  top: 150px;
+  width: 8%;
+}
+
+.about_me_image5 {
+  position: absolute;
+  left: 450px;
+  top: 320px;
+  width: 7%;
 }
